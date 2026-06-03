@@ -1,16 +1,44 @@
+# Byte-compiled / optimized
 __pycache__/
 *.py[cod]
 *$py.class
-*.egg-info/
+
+# Distribution
 dist/
 build/
-.eggs/
+*.egg-info/
 *.egg
-.pytest_cache/
-.coverage
-htmlcov/
-.mypy_cache/
-*.so
-.env
+
+# Virtual environments
 .venv/
 venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Results
+results/
+*.json
+*.csv
+!configs/*.yml
+
+# Docker
+.docker/
+
+# Coverage
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Model weights
+*.pt
+*.pth
+*.bin

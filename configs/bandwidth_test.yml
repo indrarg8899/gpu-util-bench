@@ -1,0 +1,36 @@
+# Configuration for HBM/DDR bandwidth benchmark
+test_name: bandwidth_benchmark
+version: "1.0"
+gpu_vendor: auto  # auto | nvidia | amd
+iterations: 100
+warmup_iterations: 10
+
+suites:
+  - bandwidth
+
+buffer_sizes_mb:
+  - 256
+  - 512
+  - 1024
+  - 2048
+  - 4096
+  - 8192
+  - 16384
+  - 32768
+
+directions:
+  - read
+  - write
+  - copy
+
+# Output settings
+output_dir: results/bandwidth
+output_formats:
+  - json
+  - csv
+
+# Visualization
+plot:
+  enabled: true
+  dpi: 150
+  format: png

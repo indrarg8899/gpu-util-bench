@@ -1,0 +1,42 @@
+# Configuration for compute throughput benchmark
+test_name: compute_benchmark
+version: "1.0"
+gpu_vendor: auto  # auto | nvidia | amd
+iterations: 50
+warmup_iterations: 5
+
+suites:
+  - compute
+
+# Data types to test
+dtypes:
+  - fp16
+  - fp32
+  - int8
+
+# Matrix sizes (N for NxN GEMM)
+matrix_sizes:
+  - 512
+  - 1024
+  - 2048
+  - 4096
+  - 8192
+  - 16384
+
+# Output settings
+output_dir: results/compute
+output_formats:
+  - json
+  - csv
+
+# Visualization
+plot:
+  enabled: true
+  dpi: 150
+  format: png
+
+# Additional settings
+gemm_config:
+  use_tensor_cores: true
+  use_tf32: true
+  allow_fp16_reduced_precision: true
